@@ -112,6 +112,11 @@ p.path {
 #card5 { background-color: #093A75; }
 #card6 { background-color: #000; }
 
+.card0 { 
+  background-color: #fff; 
+  color: #fff;
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;

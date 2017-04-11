@@ -145,6 +145,33 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
     else {
       $subject = "Web Application Security";
     }
+
+    # set course completion status
+    $card6c = (PATH5_C_COMP) ? "card6" : ""; 
+    $card5c = (PATH4_C_COMP) ? "card5" : ""; 
+    $card4c = (PATH3_C_COMP) ? "card4" : ""; 
+    $card3c = (PATH2_C_COMP) ? "card3" : ""; 
+    $card2c = (PATH1_C_COMP) ? "card2" : ""; 
+
+    # set kb completion status
+    $card6k = (PATH5_K_COMP) ? "card6" : ""; 
+    $card5k = (PATH4_K_COMP) ? "card5" : ""; 
+    $card4k = (PATH3_K_COMP) ? "card4" : ""; 
+    $card3k = (PATH2_K_COMP) ? "card3" : ""; 
+    $card2k = (PATH1_K_COMP) ? "card2" : ""; 
+
+    # set assessment completion status
+    $card6a = (PATH5_A_COMP) ? "card6" : ""; 
+    $card5a = (PATH4_A_COMP) ? "card5" : ""; 
+    $card4a = (PATH3_A_COMP) ? "card4" : ""; 
+    $card3a = (PATH2_A_COMP) ? "card3" : ""; 
+    $card2a = (PATH1_A_COMP) ? "card2" : ""; 
+
+    # set lab completion status
+    $card6l = (PATH5_L_COMP) ? "card6" : "";
+    $card5l = (PATH4_L_COMP) ? "card5" : "";
+    $card4l = (PATH3_L_COMP) ? "card4" : "";
+    $card3l = (PATH2_COMP) ? "card3" : "";
     ?>
     <div class="hack0 text-muted">
       <div class="container">
@@ -173,19 +200,19 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
 	      <?php echo PATH2_COMP ? "<img src=\"images/badge-yellow.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path2bloc" style="display:none;">
-          <div class="card" id="card2">
-	          <span class="card-icon glyphicon glyphicon-book"></span>
-            <p class="card-text">Advanced <?php echo $subject; ?></p>
+        <div class="card" id="<?php echo $card2c; ?>">
+	          <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
+            <p class="card-text card-text-white">Advanced <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card2">
-            <span class="card-icon glyphicon glyphicon-th-list"></span>
-            <p class="card-text">Knowledgebase Check on Advanced <?php echo $subject; ?></p>
+          <div class="card" id="<?php echo $card2k; ?>">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
+            <p class="card-text card-text-white">Knowledgebase Check on Advanced <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card2">
-            <span class="card-icon glyphicon glyphicon-pencil"></span>
-            <p class="card-text">Assessment for Advanced <?php echo $subject; ?> </p>
+          <div class="card" id="<?php echo $card2a; ?>">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> </p>
           </div>
         </div>
 
@@ -193,22 +220,22 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
 	      <?php echo PATH3_COMP ? "<img src=\"images/badge-orange.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path3bloc" style="display:none;">
-          <div class="card" id="card3">
+        <div class="card" id="<?php echo $card3c; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
             <p class="card-text card-text-white">Advanced <?php echo $subject; ?> II</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card3">
+          <div class="card" id="<?php echo $card3k; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
             <p class="card-text card-text-white">Knowledgebase Check on Advanced <?php echo $subject; ?> II</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card3">
+          <div class="card" id="<?php echo $card3a; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> II</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card3">
+          <div class="card" id="<?php echo $card3l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> II</p>
           </div>
@@ -218,22 +245,22 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
         <?php echo PATH4_COMP ? "<img src=\"images/badge-green.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path4bloc" style="display:none;">
-          <div class="card" id="card4">
+        <div class="card" id="<?php echo $card4c; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
             <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Architect and Manager</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card4">
+          <div class="card" id="<?php echo $card4k; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
             <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Architect and Manager</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card4">
+          <div class="card" id="<?php echo $card4a; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Architect and Manager</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card4">
+          <div class="card" id="<?php echo $card4l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> II</p>
           </div>
@@ -243,27 +270,27 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
         <?php echo PATH5_COMP ? "<img src=\"images/badge-blue.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path5bloc" style="display:none;">
-          <div class="card" id="card5">
+        <div class="card" id="<?php echo $card5c; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
             <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Security Researchers</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card5">
+          <div class="card" id="<?php echo $card5k; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
             <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Security Researchers</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card5">
+          <div class="card" id="<?php echo $card5a; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Security Researchers</p> 
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card5">
+          <div class="card" id="<?php echo $card5l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span> 
             <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> for Security Researchers</p>        
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card5">
+          <div class="card" id="<?php echo $card5l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Security Design in Advanced <?php echo $subject; ?> for Security Researchers</p>
           </div>
@@ -273,32 +300,32 @@ if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["s
         <?php echo PATH6_COMP ? "<img src=\"images/badge-black.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path6bloc" style="display:none;">
-          <div class="card" id="card6">
+        <div class="card" id="<?php echo $card6c; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
             <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Security Expert</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card6">
+          <div class="card" id="<?php echo $card6k; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
             <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Security Expert</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card6">
+          <div class="card" id="<?php echo $card6a; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Security Expert</p> 
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card6">
+          <div class="card" id="<?php echo $card6l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> III</p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card6">
+          <div class="card" id="<?php echo $card6l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Security Design in <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card" id="card6">
+          <div class="card" id="<?php echo $card6l; ?>">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Thesis for Advanced <?php echo $subject; ?></p>
           </div>
