@@ -83,7 +83,7 @@
         <p class="path" id="path1"><img src="images/path-white.png"> Signature Level 
           <?php echo PATH1_COMP ? "<img src=\"images/badge-white.png\" width=\"80px\">" : ""; ?>
         </p>
-        <div class="row" id="path1bloc">
+        <div class="row" id="path1bloc" style="display:none;">
           <div class="card" id="card1">
 	    <span class="card-icon glyphicon glyphicon-book"></span>
             <p class="card-text">Introduction to <?php echo $subject; ?></p>
@@ -103,7 +103,7 @@
         <p class="path" id="path2"><img src="images/path-yellow.png"> Primary Level 
 	<?php echo PATH2_COMP ? "<img src=\"images/badge-yellow.png\" width=\"80px\">" : ""; ?>
         </p>
-        <div class="row" id="path2bloc">
+        <div class="row" id="path2bloc" style="display:none;">
           <div class="card" id="card2">
 	    <span class="card-icon glyphicon glyphicon-book"></span>
             <p class="card-text">Advanced <?php echo $subject; ?></p>
@@ -123,7 +123,7 @@
         <p class="path" id="path3"><img src="images/path-orange.png"> Power Level</p>
 	<?php echo PATH3_COMP ? "<img src=\"images/badge-orange.png\" width=\"80px\">" : ""; ?>
         </p>
-        <div class="row" id="path3bloc">
+        <div class="row" id="path3bloc" style="display:none;">
           <div class="card" id="card3">
             <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
             <p class="card-text card-text-white">Advanced <?php echo $subject; ?> II</p>
