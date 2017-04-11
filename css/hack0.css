@@ -105,17 +105,12 @@ p.path {
   background-size: 200% 100%;
 }
                               
-#card1 {
-  background-color: #fff;
-}
-
-#card2 {
-  background-color: #FECA50;
-}
-
-#card3 {
-  background-color: #FF3C24;
-}
+#card1 { background-color: #fff; }
+#card2 { background-color: #FECA50; }
+#card3 { background-color: #FF3C24; }
+#card4 { background-color: #377F4F; }
+#card5 { background-color: #093A75; }
+#card6 { background-color: #000; }
 
 footer {
   padding-top: 3rem;

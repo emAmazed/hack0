@@ -31,6 +31,18 @@
       $("#path3").click(function(){
         $("#path3bloc").fadeToggle("slow");
       });
+      // green path
+      $("#path4").click(function(){
+        $("#path4bloc").fadeToggle("slow");
+      });
+      // blue path
+      $("#path5").click(function(){
+        $("#path5bloc").fadeToggle("slow");
+      });
+      // black path
+      $("#path6").click(function(){
+        $("#path6bloc").fadeToggle("slow");
+      });
 
     });
     </script>
@@ -71,6 +83,7 @@
       <p class="lead text-muted">
       ILP is an alternate approach that provides a range of recommended e-learning activities, e.g. courses, assessment, knowledgebase, to allow the learners to build knowledge progressively. By providing a complete pathway instead of a single event to the learners, it enables the learners with new ways to lead towards their learning objectives and reduces the overhead cost during such process.  
       </p>
+      <p><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p>
     </div>
     </section>
 
@@ -85,7 +98,7 @@
         </p>
         <div class="row" id="path1bloc" style="display:none;">
           <div class="card" id="card1">
-	    <span class="card-icon glyphicon glyphicon-book"></span>
+	          <span class="card-icon glyphicon glyphicon-book"></span>
             <p class="card-text">Introduction to <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
@@ -96,16 +109,16 @@
           <div class="empty-card"></div>
           <div class="card" id="card1">
             <span class="card-icon glyphicon glyphicon-pencil"></span>
-	    <p class="card-text">Assessment for Introduction to <?php echo $subject; ?></p>
+	          <p class="card-text">Assessment for Introduction to <?php echo $subject; ?></p>
           </div>
         </div>
 
         <p class="path" id="path2"><img src="images/path-yellow.png"> Primary Level 
-	<?php echo PATH2_COMP ? "<img src=\"images/badge-yellow.png\" width=\"80px\">" : ""; ?>
+	      <?php echo PATH2_COMP ? "<img src=\"images/badge-yellow.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path2bloc" style="display:none;">
           <div class="card" id="card2">
-	    <span class="card-icon glyphicon glyphicon-book"></span>
+	          <span class="card-icon glyphicon glyphicon-book"></span>
             <p class="card-text">Advanced <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
@@ -120,8 +133,8 @@
           </div>
         </div>
 
-        <p class="path" id="path3"><img src="images/path-orange.png"> Power Level</p>
-	<?php echo PATH3_COMP ? "<img src=\"images/badge-orange.png\" width=\"80px\">" : ""; ?>
+        <p class="path" id="path3"><img src="images/path-orange.png"> Power Level
+	      <?php echo PATH3_COMP ? "<img src=\"images/badge-orange.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path3bloc" style="display:none;">
           <div class="card" id="card3">
@@ -138,17 +151,103 @@
             <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
             <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> II</p>
           </div>
-	  <div class="empty-card"></div>
+          <div class="empty-card"></div>
           <div class="card" id="card3">
             <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
             <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> II</p>
           </div>
-
         </div>
 
-        <p class="path" id="path4"><img src="images/path-green.png"> Earth Level</p>
-        <p class="path" id="path5"><img src="images/path-blue.png"> Planet Level</p>
-        <p class="path" id="path6"><img src="images/path-black.png"> Diamond Level</p>
+        <p class="path" id="path4"><img src="images/path-green.png"> Earth Level
+        <?php echo PATH4_COMP ? "<img src=\"images/badge-green.png\" width=\"80px\">" : ""; ?>
+        </p>
+        <div class="row" id="path4bloc" style="display:none;">
+          <div class="card" id="card4">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
+            <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Architect and Manager</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card4">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
+            <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Architect and Manager</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card4">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Architect and Manager</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card4">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
+            <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> II</p>
+          </div>
+        </div>
+
+        <p class="path" id="path5"><img src="images/path-blue.png"> Planet Level
+        <?php echo PATH5_COMP ? "<img src=\"images/badge-blue.png\" width=\"80px\">" : ""; ?>
+        </p>
+        <div class="row" id="path5bloc" style="display:none;">
+          <div class="card" id="card5">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
+            <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Security Researchers</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card5">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
+            <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Security Researchers</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card5">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Security Researchers</p> 
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card5">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span> 
+            <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> for Security Researchers</p>        
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card5">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Security Design in Advanced <?php echo $subject; ?> for Security Researchers</p>
+          </div>
+        </div>
+
+        <p class="path" id="path6"><img src="images/path-black.png"> Diamond Level
+        <?php echo PATH6_COMP ? "<img src=\"images/badge-black.png\" width=\"80px\">" : ""; ?>
+        </p>
+        <div class="row" id="path6bloc" style="display:none;">
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
+            <p class="card-text card-text-white">Advanced <?php echo $subject; ?> for Security Expert</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
+            <p class="card-text card-text-white">Knowledgebase of Advanced <?php echo $subject; ?> for Security Expert</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> for Security Expert</p> 
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
+            <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> III</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
+            <p class="card-text card-text-white">Security Design in <?php echo $subject; ?></p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card6">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
+            <p class="card-text card-text-white">Thesis for Advanced <?php echo $subject; ?></p>
+          </div>
+        </div>
+
       </div>
     </div>
 
