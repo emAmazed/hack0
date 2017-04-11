@@ -1,7 +1,3 @@
-body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
-}
-
 .navbar {
   margin-bottom: 0;
 }
@@ -22,10 +18,10 @@ body {
 }
 
 .jumbotron .container {
-  max-width: 80rem;
+  max-width: 100rem;
 }
 
-.album {
+.hack0 {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -36,27 +32,43 @@ body {
   float: left;
   width: 10px;
   height: 280px;
-  padding: .75rem;
+  padding: 3.75rem;
   margin-bottom: 2rem;
 }
 
 .card {
   float: left;
-  width: 356px;
+  border-radius: 25px;
+  border: 1px solid #666;
+  width: 256px;
   height: 280px;
-  background-color: #66FF99;
+  /*background-color: #66FF99;*/
   padding: .75rem;
   margin-bottom: 2rem;
+  margin-left: 40px;
+  text-align: center;
 }
 
 .card-text {
   line-height: 40px;
   font-size: 1.5em;
-  margin-top: 80px;
+  /*margin-top: 60px;*/
   padding: .75rem;
-  vertical-align: middle;
-  text-align: center;
   word-wrap: break-word;
+}
+
+.card-text-white {
+  color: #fff;
+}
+
+.card-icon {
+ margin-top: 40px;
+}
+.glyphicon {
+   font-size: 36px;
+}
+.glyphicon-white {
+  color: #fff;
 }
 
 p.path {
@@ -93,6 +105,18 @@ p.path {
   background-size: 200% 100%;
 }
                               
+#card1 {
+  background-color: #fff;
+}
+
+#card2 {
+  background-color: #FECA50;
+}
+
+#card3 {
+  background-color: #FF3C24;
+}
+
 footer {
   padding-top: 3rem;
   padding-bottom: 3rem;

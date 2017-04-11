@@ -1,4 +1,4 @@
-
+<?php include_once("config.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,16 +12,26 @@
     <!-- Bootstrap core CSS -->
     <link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="css/hack0.css" rel="stylesheet">
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="css/album.css" rel="stylesheet">
     <script>
     $(document).ready(function() {
+      // white path
       $("#path1").click(function(){
         $("#path1bloc").fadeToggle("slow");
       });
+      // yellow path
+      $("#path2").click(function(){
+        $("#path2bloc").fadeToggle("slow");
+      });
+      // orange path
+      $("#path3").click(function(){
+        $("#path3bloc").fadeToggle("slow");
+      });
+
     });
     </script>
   </head>
@@ -67,44 +77,75 @@
     <?php
     $subject = "Web Application Security";
     ?>
-    <div class="album text-muted">
+    <div class="hack0 text-muted">
       <div class="container">
 
         <p class="path" id="path1"><img src="images/path-white.png"> Signature Level 
-          <img src="images/badge-white.png" width="80px">
+          <?php echo PATH1_COMP ? "<img src=\"images/badge-white.png\" width=\"80px\">" : ""; ?>
         </p>
         <div class="row" id="path1bloc">
-          <div class="card">
+          <div class="card" id="card1">
+	    <span class="card-icon glyphicon glyphicon-book"></span>
             <p class="card-text">Introduction to <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card">
+          <div class="card" id="card1">
+            <span class="card-icon glyphicon glyphicon-th-list"></span>
             <p class="card-text">Knowledgebase Check on Introduction to <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card">
-            <p class="card-text">Assessment for Introduction to <?php echo $subject; ?></p>
+          <div class="card" id="card1">
+            <span class="card-icon glyphicon glyphicon-pencil"></span>
+	    <p class="card-text">Assessment for Introduction to <?php echo $subject; ?></p>
           </div>
         </div>
 
         <p class="path" id="path2"><img src="images/path-yellow.png"> Primary Level 
-          <img src="images/badge-yellow.png" width="80px">
+	<?php echo PATH2_COMP ? "<img src=\"images/badge-yellow.png\" width=\"80px\">" : ""; ?>
         </p>
-        <div class="row">
-          <div class="card">
-          <p class="card-text">Advanced <?php echo $subject; ?></p>
+        <div class="row" id="path2bloc">
+          <div class="card" id="card2">
+	    <span class="card-icon glyphicon glyphicon-book"></span>
+            <p class="card-text">Advanced <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card">
-          <p class="card-text">Knowledgebase Check on Advanced <?php echo $subject; ?></p>
+          <div class="card" id="card2">
+            <span class="card-icon glyphicon glyphicon-th-list"></span>
+            <p class="card-text">Knowledgebase Check on Advanced <?php echo $subject; ?></p>
           </div>
           <div class="empty-card"></div>
-          <div class="card">
-          <p class="card-text">Assessment for Advanced <?php echo $subject; ?> </p>
+          <div class="card" id="card2">
+            <span class="card-icon glyphicon glyphicon-pencil"></span>
+            <p class="card-text">Assessment for Advanced <?php echo $subject; ?> </p>
           </div>
         </div>
 
         <p class="path" id="path3"><img src="images/path-orange.png"> Power Level</p>
+	<?php echo PATH3_COMP ? "<img src=\"images/badge-orange.png\" width=\"80px\">" : ""; ?>
+        </p>
+        <div class="row" id="path3bloc">
+          <div class="card" id="card3">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-book"></span>
+            <p class="card-text card-text-white">Advanced <?php echo $subject; ?> II</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card3">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-th-list"></span>
+            <p class="card-text card-text-white">Knowledgebase Check on Advanced <?php echo $subject; ?> II</p>
+          </div>
+          <div class="empty-card"></div>
+          <div class="card" id="card3">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-pencil"></span>
+            <p class="card-text card-text-white">Assessment for Advanced <?php echo $subject; ?> II</p>
+          </div>
+	  <div class="empty-card"></div>
+          <div class="card" id="card3">
+            <span class="card-icon glyphicon glyphicon-white glyphicon-wrench"></span>
+            <p class="card-text card-text-white">Lab for Advanced <?php echo $subject; ?> II</p>
+          </div>
+
+        </div>
+
         <p class="path" id="path4"><img src="images/path-green.png"> Earth Level</p>
         <p class="path" id="path5"><img src="images/path-blue.png"> Planet Level</p>
         <p class="path" id="path6"><img src="images/path-black.png"> Diamond Level</p>
@@ -117,17 +158,9 @@
     </div>
     </footer>
 
-    <script
-      src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
-      integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-      crossorigin="anonymous"></script>
     <script>window.jQuery
       ||
       document.write('<script src="js/vendor/jquery-3.2.0.min.js"><\/script>')</script>
-      <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
-        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
-        crossorigin="anonymous"></script>
       <script src="js/vendor/holder.min.js"></script>
       <script>
         $(function () {
