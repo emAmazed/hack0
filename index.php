@@ -70,7 +70,7 @@
     </div>
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand">About</a>
+        <a href="http://localhost/hackathon0" class="navbar-brand">About</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -83,12 +83,68 @@
       <p class="lead text-muted">
       ILP is an alternate approach that provides a range of recommended e-learning activities, e.g. courses, assessment, knowledgebase, to allow the learners to build knowledge progressively. By providing a complete pathway instead of a single event to the learners, it enables the learners with new ways to lead towards their learning objectives and reduces the overhead cost during such process.  
       </p>
-      <p><span class="glyphicon glyphicon-search" aria-hidden="true"></span></p>
+        <form method="post">
+      <div class="col-lg" style="margin-left:80px;">
+      <div class="input-group">
+        <input type="text" class="form-control" name="searchPath" style="height: 54px; font-size:26px;" placeholder="Search for Learning Pathway ...">
+        <span class="input-group-btn">
+          <button class="btn btn-default" name="subPath" type="submit"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+        </span>
+      </div><!-- /input-group -->
+      </div><!-- /.col-lg-6 -->
+        </form>
     </div>
+
+      <div style="margin-top:20px;"> 
+      <?php
+if ( isset($_POST["subPath"]) && isset($_POST["searchPath"]) && !empty($_POST["searchPath"]) ) {
+?>
+    <div class='alert alert-success' role='alert'>
+    <p>The Following Learning Pathways are recommended to you:</p>
+<?php
+    $searchPath = ucwords(strtolower($_POST["searchPath"]));
+    echo "<p style='font-weight:bold;'><a href=\"index.php?s=$searchPath&p=1\">".$searchPath." Classic Learning Pathway</a></p>\n";
+    echo "<p style='font-weight:bold;'><a href=\"index.php?s=$searchPath&p=2\">Version 2017 of ".$searchPath." Learning Pathway</a></p>\n";
+    echo "<p style='font-weight:bold;'><a href=\"index.php?s=$searchPath&p=3\">VeracodeWay ".$searchPath." Learning Pathway</a></p>\n";
+?>
+    </div>
+<?php
+}
+?>
+      </div>
     </section>
 
     <?php
-    $subject = "Web Application Security";
+    if ( isset($_GET["s"]) && !empty($_GET["s"]) ) {
+      $subject = $_GET["s"];
+
+      if ( isset($_GET["p"]) && !empty($_GET["p"]) ) {
+        # set pathway value
+        switch ($_GET["p"]) {
+          case 1:
+            $path = $_GET["s"]." Classic";
+            break;
+          case 2:
+            $path = "Version 2017 of ".$_GET["s"];
+            break;
+          case 3:
+            $path = "VeracodeWay ".$_GET["s"];
+            break;
+          default:
+            $path = "";
+            break;
+        }
+      }
+?>
+    
+    <div class='alert alert-success' role='alert'>
+    <p style="font-size:21px; font-weight:bold;text-align:center;">You are currently on <?php echo $path; ?> Learning Pathway</p>
+    </div>
+<?php
+    }
+    else {
+      $subject = "Web Application Security";
+    }
     ?>
     <div class="hack0 text-muted">
       <div class="container">
